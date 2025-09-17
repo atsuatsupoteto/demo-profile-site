@@ -1,0 +1,95 @@
+/* 共通スタイル */
+* {
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 70px;
+  color: #383e45;
+}
+
+section {
+  padding: 0 0 50px;
+}
+
+/* ヘッダー */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 124px;
+}
+
+h1 {
+  font-size: 28px;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 12px 24px;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+nav a {
+  color: #24292e;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+/* ヒーローセクション */
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 30px;
+}
+
+/* aboutセクション */
+.about-contents {
+  display: flex;
+  gap: 24px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.about-img img {
+  border-radius: 50%;
+  object-fit: cover;
+}
+.about-info {
+  display: flex;
+  flex-direction: column; /* 縦並び */
+  width: 400px;
+}
+.about-name {
+  text-align: left;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.about-text {
+  font-size: 14px;
+  text-align: left;
+  line-height: 1.6;
+}
+
+/* futsalセクション */
+.futsal-contents {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  text-align: center;
+}
+
+/* フッター */
+footer {
+  margin-bottom: 50px;
+  font-size: 8px;
+  text-align: center;
+}
