@@ -2,16 +2,20 @@
 * {
   margin: 0;
 }
+html,
+body {
+  overflow-x: hidden;
+}
 
 h2 {
   text-align: center;
   font-size: 32px;
-  margin-bottom: 70px;
+  margin-bottom: 72px;
   color: #383e45;
 }
 
-section {
-  padding: 0 0 50px;
+.section {
+  padding: 50px 0;
 }
 
 /* ヘッダー */
@@ -42,11 +46,13 @@ nav a {
 }
 
 /* ヒーローセクション */
+.hero {
+  margin-bottom: 30px;
+}
 .hero img {
   width: 100%;
   height: auto;
   display: block;
-  margin-bottom: 30px;
 }
 
 /* aboutセクション */
@@ -56,7 +62,6 @@ nav a {
   text-align: center;
   align-items: center;
   justify-content: center;
-  margin-bottom: 50px;
 }
 .about-img img {
   border-radius: 50%;
@@ -92,4 +97,57 @@ footer {
   margin-bottom: 50px;
   font-size: 8px;
   text-align: center;
+}
+
+/* --------------------
+  レスポンシブ調整
+-------------------- */
+@media (max-width: 1000px) {
+  /* タブレット表示 */
+}
+
+@media (max-width: 640px) {
+  /* SP表示 */
+
+  /* 共通 */
+  .section {
+    padding: 50px 14px;
+  }
+  h2 {
+    margin-bottom: 48px;
+  }
+
+  /* ヘッダー */
+  header {
+    padding: 16px;
+  }
+  nav ul {
+    gap: 12px;
+    padding: 0;
+  }
+
+  /* aboutセクション */
+  .about-contents {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .about-info {
+    width: 100%;
+    padding: 0 16px;
+  }
+  .about-text {
+    font-size: 14px;
+    text-align: left;
+  }
+
+  /* futsalセクション */
+  .futsal-contents {
+    flex-direction: column;
+    gap: 28px;
+    padding: 0 16px;
+  }
+  .futsal-item img {
+    width: 100%;
+    height: auto;
+  }
 }
