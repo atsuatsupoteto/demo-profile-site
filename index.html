@@ -31,7 +31,7 @@
                 </div>
                 <div class="about-info">
                     <div class="about-name">
-                        atsuya honda
+                        atsuya
                     </div>
                     <div class="about-text">
                         <p>不定期で超ゆるゆる男女MIXエンジョイフットサルをやっています。</p>
@@ -43,35 +43,30 @@
             </div>
         </section>
 
-        <section id="futsal" class="section futsal">
+        <section id="futsal">
             <h2>Futsal</h2>
-            <div class="futsal-contents">
-                <article class="futsal-item">
-                    <img src="https://placehold.jp/274x182.png" alt="フットサル活動1" />
-                    <h3>フットサル活動1</h3>
-                    <time datetime="2025-09-01">2025年9月1日</time>
-                </article>
-
-                <article class="futsal-item">
-                    <img src="https://placehold.jp/274x182.png" alt="フットサル活動2" />
-                    <h3>フットサル活動2</h3>
-                    <time datetime="2025-09-15">2025年9月15日</time>
-                </article>
-
-                <article class="futsal-item">
-                    <img src="https://placehold.jp/274x182.png" alt="フットサル活動3" />
-                    <h3>フットサル活動3</h3>
-                    <time datetime="2025-09-15">2025年9月15日</time>
-                </article>
-            </div>
+            <div class="futsal-contents" id="futsalContents"></div>
         </section>
+
+        <!-- フットサル活動詳細モーダル -->
+        <div id="modal" class="modal" aria-hidden="true">
+            <div class="modal-content">
+                <button id="modalClose" class="modal-close">×</button>
+                <img id="modalImg" src="" alt="詳細画像" />
+                <div class="modal-header">
+                    <h3 id="modalTitle"></h3>
+                    <time id="modalDate"></time>
+                </div>
+                <p id="modalDesc"></p>
+            </div>
+        </div>
     </main>
 
     <footer>
         <div class="muted">© 2025 Profile</div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="assets/js/futsal.js"></script>
 </body>
 
 </html>

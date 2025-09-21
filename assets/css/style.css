@@ -86,15 +86,94 @@ nav a {
 
 /* futsalセクション */
 .futsal-contents {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 200px); /* PC・タブレットでは4列固定 */
   gap: 16px;
   justify-content: center;
+}
+.futsal-item {
   text-align: center;
+  cursor: pointer;
+}
+
+.futsal-item img {
+  width: 100%;
+  height: auto;
+}
+/* モーダル全体 */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+}
+.modal.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* モーダル中身 */
+.modal-content {
+  position: relative; /* 追加 */
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* 閉じるボタン */
+.modal-close {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}
+
+/* 画像は横幅いっぱい */
+.modal-content img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 16px;
+}
+
+/* タイトル、日付、説明 */
+.modal-header {
+  display: flex;
+  justify-content: space-between; /* タイトルと日付を左右に分ける */
+  align-items: center; /* 高さを揃える */
+  margin-bottom: 16px; /* 下に余白 */
+}
+
+.modal-header h3 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.modal-header time {
+  font-size: 14px;
+  color: #666;
+}
+.modal-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: left;
 }
 
 /* フッター */
 footer {
-  margin-bottom: 50px;
+  margin: 50px 0;
   font-size: 8px;
   text-align: center;
 }
@@ -142,12 +221,7 @@ footer {
 
   /* futsalセクション */
   .futsal-contents {
-    flex-direction: column;
-    gap: 28px;
-    padding: 0 16px;
-  }
-  .futsal-item img {
-    width: 100%;
-    height: auto;
+    grid-template-columns: 1fr; /* スマホは1列 */
+    padding: 0 24px;
   }
 }
