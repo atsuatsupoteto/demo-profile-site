@@ -51,8 +51,8 @@ nav a {
 }
 .hero img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 60vh; /* 画面高さの60%くらいに調整 */
+  object-fit: cover; /* 余白なく切り取り */
 }
 
 /* aboutセクション */
@@ -95,10 +95,12 @@ nav a {
   text-align: center;
   cursor: pointer;
 }
-
 .futsal-item img {
   width: 100%;
-  height: auto;
+  aspect-ratio: 4 / 3; /* 4:3の比率を維持 */
+  object-fit: cover; /* はみ出した部分はトリミング */
+  border-radius: 8px;
+  display: block;
 }
 /* モーダル全体 */
 .modal {
@@ -143,9 +145,10 @@ nav a {
 
 /* 画像は横幅いっぱい */
 .modal-content img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 16px;
+  width: 100%; /* 横幅いっぱい */
+  height: auto; /* 縦横比は維持 */
+  max-height: 80vh; /* 画面の縦の80%までに制限 */
+  object-fit: contain; /* はみ出さず全体表示 */
 }
 
 /* タイトル、日付、説明 */
